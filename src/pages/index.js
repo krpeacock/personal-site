@@ -19,7 +19,7 @@ const Well = styled.div`
   left: 0;
 `
 
-const IndexPage = () => (
+const IndexPage = ({ location }) => (
   <Layout>
     <>
       <Well>

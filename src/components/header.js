@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const homeRef = '/'
@@ -21,8 +21,7 @@ const Column = styled.div`
   position: relative;
   z-index: 2;
 `
-
-const Header = ({ location }) => (
+const Header = ({ pathname }) => (
   <HeaderShell>
     <Column>
       <Link
@@ -56,7 +55,7 @@ const Header = ({ location }) => (
         >
           <Link
             to="/"
-            className={''}
+            activeClassName="active"
             style={{
               textDecoration: 'none',
               marginRight: '15px',
@@ -66,7 +65,7 @@ const Header = ({ location }) => (
           </Link>
           <Link
             to="/blog"
-            className={''}
+            activeClassName="active"
             style={{
               textDecoration: 'none',
             }}
@@ -75,7 +74,7 @@ const Header = ({ location }) => (
           </Link>
           <Link
             to="/contact"
-            className={''}
+            activeClassName="active"
             style={{
               textDecoration: 'none',
               marginLeft: '15px',
